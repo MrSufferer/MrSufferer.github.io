@@ -4,79 +4,28 @@
     "name": "Oreka",
     "category": "Prediction market infrastructure",
     "status": "Open-source project",
-    "desc": "Reusable infrastructure for markets where people trade on the outcome of future events.",
-    "detail": "Binary prediction markets on the Internet Computer, with price-feed settlement, Internet Identity authentication, and a factory for deploying custom markets.",
-    "value": "Useful for founders building prediction products who need market creation, identity, trading, and settlement connected in one application.",
+    "desc": "On-chain prediction markets, from creation to settlement.",
+    "detail": "A market factory on the Internet Computer deploys configurable price-direction markets. Internet Identity handles authentication, while HTTP outcalls bring price feeds into on-chain settlement.",
+    "value": "Market deployment, trading positions, price-feed integration, and settlement across Motoko canisters and a TypeScript interface.",
     "stack": [
+      "Motoko",
       "TypeScript",
-      "ICP",
-      "Smart contracts"
+      "ICP"
     ],
-    "demo": "https://tuv3q-uiaaa-aaaar-qblbq-cai.icp0.io/",
+    "demo": "https://youtu.be/3SbgZNxx3wU",
     "image": "oreka.png",
-    "caption": "Product interface \u00b7 screenshot from the project repository"
-  },
-  {
-    "id": "chakra",
-    "name": "Chakra",
-    "category": "DEX aggregation & routing",
-    "status": "Arc testnet",
-    "desc": "One swap interface. Multiple liquidity venues. A routing engine that finds and splits the trade.",
-    "detail": "A Rust quote API and market-data worker maintain pool snapshots in Redis. The router combines multiple venue types, while Solidity contracts execute splits through Permit2 and a TypeScript SDK connects the frontend.",
-    "value": "Relevant to trading teams that need a fast quote service, reliable blockchain indexing, wallet execution, and visibility into route health.",
-    "stack": [
-      "Rust",
-      "Solidity",
-      "TypeScript",
-      "Redis"
-    ],
-    "demo": "https://chakra-ag.vercel.app",
-    "image": "chakra.png",
-    "caption": "Swap interface \u00b7 captured from the live Arc testnet demo"
-  },
-  {
-    "id": "kamui",
-    "name": "Kamui",
-    "category": "Verifiable randomness",
-    "status": "Solana devnet demo",
-    "desc": "Random results that applications can verify, rather than simply trust.",
-    "detail": "An elliptic-curve verifiable random function implementation with a Rust cryptography library, CLI proof generation and verification, a Solana program, and a wallet-connected demonstration.",
-    "value": "A foundation for games and protocols that need independently verifiable random outcomes and an integration path from proof generation to on-chain verification.",
-    "stack": [
-      "Rust",
-      "Solana",
-      "TypeScript",
-      "Cryptography"
-    ],
-    "demo": "https://kamuipoc.vercel.app",
-    "image": "kamui.png",
-    "caption": "VRF demo \u00b7 captured from the live Solana devnet interface"
-  },
-  {
-    "id": "fleet-pay",
-    "name": "FleetPay",
-    "category": "Payments & escrow",
-    "status": "Avalanche Fuji MVP",
-    "desc": "Send a payment to an email address, before the recipient has a wallet.",
-    "detail": "An on-chain escrow lets recipients verify their email and claim to an Avalanche address. Pending funds can enter a capped yield vault; positive realized yield is shared on successful claims. Includes cancellation, expiry, and a fiat conversion preview.",
-    "value": "Shows the full payment journey: onboarding, escrow state, recipient claims, and integration with external yield protocols.",
-    "stack": [
-      "Avalanche",
-      "Smart contracts",
-      "Web application"
-    ],
-    "demo": "https://fleetpay.app",
-    "image": "fleet-pay.png",
-    "caption": "Payment interface \u00b7 screenshot from the project repository"
+    "caption": "Trading and settlement \u00b7 cropped from the 4K product walkthrough",
+    "demo_label": "Watch walkthrough",
+    "alt": "Oreka market showing a resolved outcome, final price, chart, and reward claim"
   },
   {
     "id": "haze-api",
     "name": "Haze API",
     "category": "Private API credits & AI tooling",
     "status": "Experimental \u00b7 Base Sepolia",
-    "desc": "Prepaid API access with zero-knowledge proofs and a custom x402 integration.",
-    "detail": "An invite-only pilot for private API credits. A local sidecar and versioned zk-prepaid adapter connect supported clients to a non-streaming chat API. Operational controls include readiness checks, durable pause state, and provider-spend caps.",
-    "value": "Relevant to API and AI products that need client adapters, proof verification, billing state, and careful operational controls.",
+    "desc": "Private prepaid credits for API access.",
+    "detail": "Zero-knowledge proofs and a custom x402 adapter connect prepaid credits to an AI chat API. A local sidecar handles client integration, with readiness checks, spend limits, and durable pause controls on the service.",
+    "value": "Proof verification, credit accounting, API adapters, and operational controls in one system.",
     "stack": [
       "TypeScript",
       "Zero-knowledge",
@@ -85,6 +34,65 @@
     ],
     "demo": "https://hazecredits.vercel.app",
     "image": "haze-api.png",
-    "caption": "API credits interface \u00b7 captured from the public product site"
+    "caption": "Client integration \u00b7 Codex session using ZK Credits \u00b7 supplied product capture",
+    "alt": "Terminal client session showing a returned response with GPT-4o Mini through ZK Credits"
+  },
+  {
+    "id": "chakra",
+    "name": "Chakra",
+    "category": "DEX aggregation & routing",
+    "status": "Arc testnet",
+    "desc": "A swap router that returns the quote and the route behind it.",
+    "detail": "A Rust quote service combines liquidity venues from Redis pool snapshots. The TypeScript interface displays the returned amount, minimum received, price impact, and selected route; Solidity contracts handle execution through Permit2.",
+    "value": "Rust routing and indexing, Solidity execution, a TypeScript SDK, and the swap interface.",
+    "stack": [
+      "Rust",
+      "Solidity",
+      "TypeScript",
+      "Redis"
+    ],
+    "demo": "https://chakra-ag.vercel.app",
+    "image": "chakra.png",
+    "caption": "Live quote \u00b7 100 USDC \u2192 113.927499 EURC via presto-hub \u00b7 Arc testnet",
+    "alt": "Chakra returned quote for 100 USDC to 113.927499 EURC with price impact, minimum received, and presto-hub route"
+  },
+  {
+    "id": "kamui",
+    "name": "Kamui",
+    "category": "Verifiable randomness",
+    "status": "VRF architecture",
+    "desc": "Verifiable randomness with a clear request-to-result lifecycle.",
+    "detail": "The proposed architecture binds each request to a future drand beacon. An oracle waits for that round, submits an ECVRF proof, and the program verifies it before delivering randomness to the application.",
+    "value": "The specification includes fee escrow, callback delivery, a query fallback, and refunds for requests that time out.",
+    "stack": [
+      "Rust",
+      "Solana",
+      "TypeScript",
+      "Cryptography"
+    ],
+    "demo": null,
+    "image": "kamui-sequence.svg",
+    "caption": "Five-step sequence \u00b7 proposed architecture from the Kamui VRF specification",
+    "alt": "Kamui sequence diagram: request with escrow, bind a future round, receive drand beacon, submit proof, verify and return randomness; refund after timeout"
+  },
+  {
+    "id": "mgk-exchange",
+    "name": "MGK Exchange",
+    "category": "On-chain perpetual futures",
+    "status": "Solana devnet",
+    "desc": "Perpetual futures with batch-auction matching on Solana.",
+    "detail": "Orders collect within a batch, clear through a dual-flow auction, and settle on-chain. Separate Rust programs handle custody and positions, matching, and the fallback oracle, alongside a TypeScript SDK, keeper, indexer, and trading interface.",
+    "value": "Matching logic, cross-margin portfolios, persistent orders, liquidation handling, and the batch settlement lifecycle.",
+    "stack": [
+      "Rust",
+      "Solana",
+      "Pinocchio",
+      "TypeScript"
+    ],
+    "demo": "https://mgkprotocol.vercel.app/trade",
+    "source": "https://github.com/mangekyou-labs/mgk-protocol",
+    "image": "mgk-exchange.png",
+    "caption": "Trading interface \u00b7 chart and order book \u00b7 Solana devnet",
+    "alt": "MGK Exchange devnet trading interface with candlestick chart, order book, and order entry"
   }
 ]

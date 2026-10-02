@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+  <title id="title">Kamui: from request to verifiable randomness</title>
+  <desc id="desc">The application requests randomness and escrows a fee. Kamui binds the request to a future drand round. The oracle waits for that beacon, submits a proof, and Kamui verifies it before returning randomness. If fulfillment times out, the requester can claim a refund.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#2455db"/></marker></defs>
+  <rect width="1000" height="720" rx="12" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#1d2432">
+    <text x="40" y="48" font-size="25" font-weight="700">A request. A proof. A verifiable result.</text>
+    <text x="40" y="78" font-size="17" fill="#596171">Proposed request lifecycle · based on the Kamui VRF specification</text>
+    <g fill="#eef2fb" stroke="#dce1e9"><rect x="40" y="108" width="180" height="56" rx="8"/><rect x="280" y="108" width="200" height="56" rx="8"/><rect x="560" y="108" width="180" height="56" rx="8"/><rect x="790" y="108" width="170" height="56" rx="8"/></g>
+    <g text-anchor="middle" font-size="21" font-weight="700"><text x="130" y="143">Application</text><text x="380" y="143">Kamui program</text><text x="650" y="143">Oracle worker</text><text x="875" y="143">drand beacon</text></g>
+    <g stroke="#dce1e9" stroke-width="2" stroke-dasharray="6 7"><path d="M130 164V610"/><path d="M380 164V610"/><path d="M650 164V610"/><path d="M875 164V610"/></g>
+    <g stroke="#2455db" stroke-width="3" marker-end="url(#arrow)"><path d="M130 230H380"/><path d="M380 302H650"/><path d="M875 376H650"/><path d="M650 450H380"/><path d="M380 582H130"/></g>
+    <g font-size="20"><text x="146" y="210">1. Request + escrow fee</text><text x="396" y="282">2. Bind to a future round</text><text x="564" y="356">3. Future beacon is published</text><text x="396" y="430">4. Submit randomness proof</text><text x="146" y="562">5. Return verified result</text></g>
+    <rect x="280" y="474" width="460" height="46" rx="8" fill="#eef2fb"/>
+    <text x="510" y="504" text-anchor="middle" font-size="19" fill="#2455db">Verify the beacon and proof · release fee</text>
+    <rect x="40" y="630" width="920" height="58" rx="8" fill="#f8f9fc" stroke="#dce1e9"/>
+    <text x="62" y="665" font-size="20"><tspan font-weight="700">If the oracle times out:</tspan> the requester can reclaim the escrowed fee.</text>
+  </g>
+</svg>

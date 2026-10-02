@@ -5,7 +5,8 @@ document.querySelectorAll('[data-image]').forEach(button => {
   button.addEventListener('click', () => {
     trigger = button;
     preview.src = button.dataset.image;
-    preview.alt = `${button.dataset.name} product screenshot`;
+    preview.alt = button.querySelector('img').alt;
+    dialog.classList.toggle('sequence-dialog', button.dataset.image.endsWith('.svg'));
     document.getElementById('dialog-title').textContent = button.dataset.name;
     dialog.showModal();
     document.body.classList.add('dialog-open');
