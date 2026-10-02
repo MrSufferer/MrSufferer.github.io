@@ -1,0 +1,90 @@
+[
+  {
+    "id": "oreka",
+    "name": "Oreka",
+    "category": "Prediction market infrastructure",
+    "status": "Open-source project",
+    "desc": "Reusable infrastructure for markets where people trade on the outcome of future events.",
+    "detail": "Binary prediction markets on the Internet Computer, with price-feed settlement, Internet Identity authentication, and a factory for deploying custom markets.",
+    "value": "Useful for founders building prediction products who need market creation, identity, trading, and settlement connected in one application.",
+    "stack": [
+      "TypeScript",
+      "ICP",
+      "Smart contracts"
+    ],
+    "demo": "https://tuv3q-uiaaa-aaaar-qblbq-cai.icp0.io/",
+    "image": "oreka.png",
+    "caption": "Product interface \u00b7 screenshot from the project repository"
+  },
+  {
+    "id": "chakra",
+    "name": "Chakra",
+    "category": "DEX aggregation & routing",
+    "status": "Arc testnet",
+    "desc": "One swap interface. Multiple liquidity venues. A routing engine that finds and splits the trade.",
+    "detail": "A Rust quote API and market-data worker maintain pool snapshots in Redis. The router combines multiple venue types, while Solidity contracts execute splits through Permit2 and a TypeScript SDK connects the frontend.",
+    "value": "Relevant to trading teams that need a fast quote service, reliable blockchain indexing, wallet execution, and visibility into route health.",
+    "stack": [
+      "Rust",
+      "Solidity",
+      "TypeScript",
+      "Redis"
+    ],
+    "demo": "https://chakra-ag.vercel.app",
+    "image": "chakra.png",
+    "caption": "Swap interface \u00b7 captured from the live Arc testnet demo"
+  },
+  {
+    "id": "kamui",
+    "name": "Kamui",
+    "category": "Verifiable randomness",
+    "status": "Solana devnet demo",
+    "desc": "Random results that applications can verify, rather than simply trust.",
+    "detail": "An elliptic-curve verifiable random function implementation with a Rust cryptography library, CLI proof generation and verification, a Solana program, and a wallet-connected demonstration.",
+    "value": "A foundation for games and protocols that need independently verifiable random outcomes and an integration path from proof generation to on-chain verification.",
+    "stack": [
+      "Rust",
+      "Solana",
+      "TypeScript",
+      "Cryptography"
+    ],
+    "demo": "https://kamuipoc.vercel.app",
+    "image": "kamui.png",
+    "caption": "VRF demo \u00b7 captured from the live Solana devnet interface"
+  },
+  {
+    "id": "fleet-pay",
+    "name": "FleetPay",
+    "category": "Payments & escrow",
+    "status": "Avalanche Fuji MVP",
+    "desc": "Send a payment to an email address, before the recipient has a wallet.",
+    "detail": "An on-chain escrow lets recipients verify their email and claim to an Avalanche address. Pending funds can enter a capped yield vault; positive realized yield is shared on successful claims. Includes cancellation, expiry, and a fiat conversion preview.",
+    "value": "Shows the full payment journey: onboarding, escrow state, recipient claims, and integration with external yield protocols.",
+    "stack": [
+      "Avalanche",
+      "Smart contracts",
+      "Web application"
+    ],
+    "demo": "https://fleetpay.app",
+    "image": "fleet-pay.png",
+    "caption": "Payment interface \u00b7 screenshot from the project repository"
+  },
+  {
+    "id": "haze-api",
+    "name": "Haze API",
+    "category": "Private API credits & AI tooling",
+    "status": "Experimental \u00b7 Base Sepolia",
+    "desc": "Prepaid API access with zero-knowledge proofs and a custom x402 integration.",
+    "detail": "An invite-only pilot for private API credits. A local sidecar and versioned zk-prepaid adapter connect supported clients to a non-streaming chat API. Operational controls include readiness checks, durable pause state, and provider-spend caps.",
+    "value": "Relevant to API and AI products that need client adapters, proof verification, billing state, and careful operational controls.",
+    "stack": [
+      "TypeScript",
+      "Zero-knowledge",
+      "x402",
+      "Postgres"
+    ],
+    "demo": "https://hazecredits.vercel.app",
+    "image": "haze-api.png",
+    "caption": "API credits interface \u00b7 captured from the public product site"
+  }
+]
