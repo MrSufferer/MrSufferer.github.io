@@ -51,3 +51,9 @@ body{font-size:calc(16px + 1pt)}
 @media(max-width:1000px) and (min-width:851px){.hero-layout{gap:32px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}.hero h1{font-size:36px;letter-spacing:-1.2px}.project-index{padding-inline:18px}}
 @media(max-width:850px){.hero-layout{grid-template-columns:1fr;gap:32px}.hero-intro{max-width:620px}.hero h1{font-size:40px}.hero-description{max-width:510px}.project-index{max-width:620px;width:100%}.hero-baseline{align-items:flex-start;flex-direction:column;gap:0;padding-bottom:20px}.hero-baseline .skill-line{gap:20px}}
 @media(max-width:560px){.site-header{height:88px}.hero{padding-top:32px}.hero-identity{margin-bottom:20px}.hero h1{font-size:32px;letter-spacing:-1px;line-height:1.22;margin-bottom:20px}.hero-description{font-size:15px;line-height:1.8}.hero-actions{margin-top:24px;gap:24px}.hero-actions .button{font-size:13px;padding:13px 16px;gap:16px}.hero-source{font-size:13px}.project-index{padding:16px 18px}.hero-baseline{margin-top:28px}.hero-baseline .skill-line{gap:16px}.work{padding-top:40px}}
+
+/* Softer geometric display type, hosted locally to keep loading predictable. */
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope-regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+.hero h1{font-family:Manrope,Arial,Helvetica,sans-serif;font-weight:400;letter-spacing:-1.8px;line-height:1.24}
+@media(max-width:1000px) and (min-width:851px){.hero h1{letter-spacing:-1.3px}}
+@media(max-width:560px){.hero h1{letter-spacing:-1.1px;line-height:1.28}}
