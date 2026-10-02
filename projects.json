@@ -4,9 +4,9 @@
     "name": "Oreka",
     "category": "Prediction market infrastructure",
     "status": "Open-source project",
-    "desc": "On-chain prediction markets, from creation to settlement.",
-    "detail": "A market factory on the Internet Computer deploys configurable price-direction markets. Internet Identity handles authentication, while HTTP outcalls bring price feeds into on-chain settlement.",
-    "value": "Market deployment, trading positions, price-feed integration, and settlement across Motoko canisters and a TypeScript interface.",
+    "desc": "Permissionless prediction markets on ICP mainnet.",
+    "detail": "Create and deploy your own prediction market on the Internet Computer without platform approval. Choose the price target and expiry, take a position, and follow the market through its outcome and settlement.",
+    "value": "Permissionless market deployment, trading positions, outcome settlement, and reward claims across Motoko canisters and a TypeScript interface.",
     "stack": [
       "Motoko",
       "TypeScript",
@@ -14,15 +14,15 @@
     ],
     "demo": "https://youtu.be/3SbgZNxx3wU",
     "image": "oreka.png",
-    "caption": "Trading and settlement \u00b7 cropped from the 4K product walkthrough",
+    "caption": "Market outcome, position chart, and trading controls",
     "demo_label": "Watch walkthrough",
-    "alt": "Oreka market showing a resolved outcome, final price, chart, and reward claim"
+    "alt": "Oreka showing the market outcome, position chart, strike and final prices, trading controls, and market rules"
   },
   {
     "id": "haze-api",
     "name": "Haze API",
     "category": "Private API credits & AI tooling",
-    "status": "Experimental \u00b7 Base Sepolia",
+    "status": "Private API credits",
     "desc": "Private prepaid credits for API access.",
     "detail": "Zero-knowledge proofs and a custom x402 adapter connect prepaid credits to an AI chat API. A local sidecar handles client integration, with readiness checks, spend limits, and durable pause controls on the service.",
     "value": "Proof verification, credit accounting, API adapters, and operational controls in one system.",
@@ -34,14 +34,14 @@
     ],
     "demo": "https://hazecredits.vercel.app",
     "image": "haze-api.png",
-    "caption": "Client integration \u00b7 Codex session using ZK Credits \u00b7 supplied product capture",
+    "caption": "Client integration · Codex session using ZK Credits · supplied product capture",
     "alt": "Terminal client session showing a returned response with GPT-4o Mini through ZK Credits"
   },
   {
     "id": "chakra",
     "name": "Chakra",
     "category": "DEX aggregation & routing",
-    "status": "Arc testnet",
+    "status": "Swap routing",
     "desc": "A swap router that returns the quote and the route behind it.",
     "detail": "A Rust quote service combines liquidity venues from Redis pool snapshots. The TypeScript interface displays the returned amount, minimum received, price impact, and selected route; Solidity contracts handle execution through Permit2.",
     "value": "Rust routing and indexing, Solidity execution, a TypeScript SDK, and the swap interface.",
@@ -53,7 +53,7 @@
     ],
     "demo": "https://chakra-ag.vercel.app",
     "image": "chakra.png",
-    "caption": "Live quote \u00b7 100 USDC \u2192 113.927499 EURC via presto-hub \u00b7 Arc testnet",
+    "caption": "Live quote · 100 USDC → 113.927499 EURC via presto-hub",
     "alt": "Chakra returned quote for 100 USDC to 113.927499 EURC with price impact, minimum received, and presto-hub route"
   },
   {
@@ -72,14 +72,14 @@
     ],
     "demo": null,
     "image": "kamui-sequence.svg",
-    "caption": "Five-step sequence \u00b7 proposed architecture from the Kamui VRF specification",
+    "caption": "Five-step sequence · proposed architecture from the Kamui VRF specification",
     "alt": "Kamui sequence diagram: request with escrow, bind a future round, receive drand beacon, submit proof, verify and return randomness; refund after timeout"
   },
   {
     "id": "mgk-exchange",
     "name": "MGK Exchange",
     "category": "On-chain perpetual futures",
-    "status": "Solana devnet",
+    "status": "Batch-auction exchange",
     "desc": "Perpetual futures with batch-auction matching on Solana.",
     "detail": "Orders collect within a batch, clear through a dual-flow auction, and settle on-chain. Separate Rust programs handle custody and positions, matching, and the fallback oracle, alongside a TypeScript SDK, keeper, indexer, and trading interface.",
     "value": "Matching logic, cross-margin portfolios, persistent orders, liquidation handling, and the batch settlement lifecycle.",
@@ -92,7 +92,7 @@
     "demo": "https://mgkprotocol.vercel.app/trade",
     "source": "https://github.com/mangekyou-labs/mgk-protocol",
     "image": "mgk-exchange.png",
-    "caption": "Trading interface \u00b7 chart and order book \u00b7 Solana devnet",
+    "caption": "Trading interface · chart and order book",
     "alt": "MGK Exchange devnet trading interface with candlestick chart, order book, and order entry"
   }
 ]
